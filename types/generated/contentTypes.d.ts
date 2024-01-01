@@ -992,6 +992,11 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::order.order'
     >;
+    category: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
